@@ -1,3 +1,11 @@
+version: 0.0.11
+date: 15/8/16
+changes:
+	- Created a file for holding "stop words", words to remove from stack overflow queries to standardise them.
+plans:
+	- Need to download stack overflow data dump again (corrupted files on first download).
+	- Stack overflow data is stored as an xml file. I don't know the format yet since the file was corrupted and wouldn't open so I will need to look into that when I have a copy of the data dump again.
+
 version: 0.0.1
 date: 15/8/16
 changes:
