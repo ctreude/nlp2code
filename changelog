@@ -1,0 +1,9 @@
+version: 0.0.1
+date: 15/8/16
+changes:
+	- Created changelog for reasons.
+	- Started working on natural language query processing:
+		- added code to format queries (lowercase, remove punctuation, tokenize by whitespace).
+		- added lightweight porter stemmer to stem input queries. Implemented a few extra functions to enable stemming of a list of words easily.
+plans:
+	- Create a file for holding "stop words", words to remove from the query before searching for stack overflow posts. 
