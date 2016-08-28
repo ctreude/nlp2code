@@ -27,13 +27,13 @@ public class LanguageProcessor {
 			// Code from: http://stackoverflow.com/questions/18830813/how-can-i-remove-punctuation-from-input-text-in-java
 			String[] words = input.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
 			
-			
 			String str;
 			Stemmer pstem = new Stemmer();
 			// For each word in the input.
 			for (int i=0; i<words.length; i++) {
 				str = words[i];
 				
+				//Add the word to stem, stem it and get the string representation of the stemmed input.
 				pstem.add(str.toCharArray(),str.length());
 				pstem.stem();
 				str = pstem.toString();
@@ -57,15 +57,18 @@ public class LanguageProcessor {
 		 *  http://blog.vogella.com/2010/07/06/reading-resources-from-plugin/
 		 */
 		private Vector<String> getStopWords() {
+			//New vector to hold stopwords.
 			Vector<String> vect = new Vector<String>();
 			
 			URL url;
 			try {
-			        url = new URL("platform:/plugin/nlp2code/data/stopwords.txt");
+				//Open up the stopwords.txt file in the plugin native files.
+			    url = new URL("platform:/plugin/nlp2code/data/stopwords.txt");
 			    InputStream inputStream = url.openConnection().getInputStream();
 			    BufferedReader in = new BufferedReader(new InputStreamReader(inputStream));
 			    String inputLine;
 			 
+			    //Read the stopwords line by line (comma-separated or newline separated) and put them into the stopwords vector.
 			    while ((inputLine = in.readLine()) != null) {
 			    	String[] words = inputLine.split(",");
 					for (int i=0; i<words.length; i++) {
@@ -73,13 +76,12 @@ public class LanguageProcessor {
 						vect.add(words[i]);
 					}
 			    }
-			 
+			    //close the file stream.
 			    in.close();
-			 
 			} catch (IOException e) {
 			    e.printStackTrace();
 			}
-			
+			//return the vector of stopwords.
 			return vect;
 		}
 		

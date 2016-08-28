@@ -1,3 +1,21 @@
+version: 0.0.2
+changes:
+	- Implemented a custom google search and google api interface within eclipse that queries stack overflow for a specific query (natural language query). Returns urls for top 5 stack overflow websites that match natural language query.
+	- Implemented a way to open html code of stack overflow websites. Used jsoup to open the websites to be able to interact with them using jquery.
+		- Used jquery to pull the accepted answer's code snippets and the author of the accepted answer.
+	- Brought it all together and allowed a natural language query to search google to get some topics on stack overflow, opened the urls for these using jsoup and insert the accepted answer for the first search result into the eclipse ide.
+plans:
+	- Need to refine selection of code snippet (e.g. only select longest snippet, remove comments, consider multiple sources and not just consider accepted answer etc.).
+	- Need to talk with supervisor about how to implement autocomplete. Some ideas already thought of.
+	- Need to look into tabbing through or selecting a code snippet from a few results.
+	
+version: 0.0.12
+changes:
+	- Created a program to filter the stack overflow data dump and pull all java questions and answers that have 'how to' or 'how do' in their title and have code snippet answers < 20 lines and not empty code snippets.
+plans:
+	- Figure out how to use this formatted data and how to load it into eclipse/ how to search for the code for each answer (e.g. indexing to make the process not take forever).
+	- Will probably need to sort questions further in some way to remove open-ended questions from the list since close-ended questions are the ones that will have simple code snippet answers.
+
 version: 0.0.11
 date: 15/8/16
 changes:

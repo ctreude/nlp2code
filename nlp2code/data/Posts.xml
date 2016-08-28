@@ -1,0 +1,12 @@
+<Posts>
+	<Post>
+		<Title>Allahu Ackbar</Title>
+		<Body>System.out.println("Allahu Ackbar");</Body>
+		<Id>12435124</Id>
+	</Post>
+	<Post>
+		<Title>Kappa123</Title>
+		<Body>System.out.println("KAPPER ONE TWO THREE");</Body>
+		<Id>51235123</Id>
+	</Post>
+</Posts>
