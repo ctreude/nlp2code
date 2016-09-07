@@ -1,3 +1,17 @@
+version: 0.0.4
+	- Altered auto-complete to insert special characters around a query (~).
+	- Used document listener to run query when an insertion contains "~" on either side of a block of text (i.e. when autocomplete is used).
+	- Added some quality of life, null checks, etc. to stop crashing of plugin and unintentional failing.
+plans:
+	- Need to update the way code is selected from queries (remove comments from java stuff, get multiple code snippets instead of just the first, edit the css query to get the largest code snippet etc.).
+	- Possibly find a way to tab/ cycle through given solutions (a view maybe?).
+	- Need to implement the automatic searching using the document listener. 	- When finding a '~', get whole line and if it starts with '~' and ends with '~', run a query on the line.
+	
+version: 0.0.3
+	- Implemented an auto-complete interface using the content assest menu (similar to what code recommenders does).
+	- Formatted data dump to get tasks from them.
+	- Added document listener to monitor how document changes whenever something is entered.
+
 version: 0.0.2
 changes:
 	- Implemented a custom google search and google api interface within eclipse that queries stack overflow for a specific query (natural language query). Returns urls for top 5 stack overflow websites that match natural language query.
