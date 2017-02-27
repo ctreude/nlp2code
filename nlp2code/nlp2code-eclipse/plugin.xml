@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="nlp2code.category"
+            id="nlp2code.handler"
+            name="Input Handler">
+      </command>
+      <category
+            id="nlp2code.category"
+            name="Handler Category">
+      </category>
+      <command
+            categoryId="nlp2code.category"
+            id="nlp2code.cyclehandler"
+            name="Cycle Answers Handler">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="nlp2code.InputHandler"
+            commandId="nlp2code.handler">
+      </handler>
+      <handler
+            class="nlp2code.CycleAnswersHandler"
+            commandId="nlp2code.cyclehandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="nlp2code.handler"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+6">
+      </key>
+      <key
+            commandId="nlp2code.cyclehandler"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M4+`">
+      </key>
+      <key
+            commandId="nlp2code.cyclehandler"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+`">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="nlp2code.toolbar">
+            <command
+                  commandId="nlp2code.handler"
+                  icon="icons/stackoverflow.gif"
+                  id="nlp2code.toolbar.handler"
+                  style="push"
+                  tooltip="Query Stack Overflow">
+            </command>
+            <command
+                  commandId="nlp2code.cyclehandler"
+                  icon="icons/cycle.gif"
+                  id="nlp2code.toolbar.handler"
+                  style="push"
+                  tooltip="Cycle Code Snippet - Press to see diferent answers to your previously made query. (CTRL + `)">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         id="nlp2code.contentassist"
+         point="org.eclipse.jdt.ui.javaCompletionProposalComputer">
+         <proposalCategory
+           id="nlp2code.contentassist.category"
+           name="Java completion proposals">
+		 </proposalCategory>
+		 
+		 <proposalComputer
+		    activate="true"
+		    categoryId="nlp2code.contentassist.category"
+		    class="nlp2code.JavaCompletionProposalComputer"
+		    id="nlp2code.proposalcomputer">      
+		 	<contentType id="org.eclipse.core.runtime.text"/>      
+		 </proposalComputer> 
+   </extension>
+
+</plugin>
