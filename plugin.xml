@@ -77,9 +77,7 @@
    <extension
          id="nlp2code.contentassist"
          point="org.eclipse.jdt.ui.javaCompletionProposalComputer">
-         <proposalCategory
-           id="nlp2code.contentassist.category"
-           name="Java completion proposals">
+         <proposalCategory>
 		 </proposalCategory>
 		 
 		 <proposalComputer
