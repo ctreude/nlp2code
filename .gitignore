@@ -1,7 +1,7 @@
 # Eclipse
-.classpath
-.project
-.settings/
+/task_extraction/.classpath
+/task_extraction/.project
+/task_extraction/.settings/
 
 # Mac
 .DS_Store
