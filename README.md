@@ -3,10 +3,12 @@ Nlp2code Eclipse plugin
 /*   Plugin Installation Instructions:   */
 
 To install the plugin for development:
- 1. Clone this repository.
- 2. Copy the nlp2code repository folder to your local Eclipse workspace.
- 3. The plugin should now be visible in Eclipse. If not, import the project from your workspace.
- 4. You can run the plugin by setting the Run Configuration to run as an Eclipse Application.
+ 1. Download and install the Eclipse SDK from the Eclipse Project page.
+ 2. Install Git Integration (EGit) for the Eclipse SDK.
+ 3. File->Import->Git->Projects from Git->Clone URI.
+ 4. Copy and paste the .git URI from the Nlp2code GitHub.
+ 5. Press Next until you get to the project import wizard. Choose "Import exisiting Eclipse projects" and press Next and Finish.
+ 6. You can now run the plugin by setting the Run Configuration to run as an Eclipse Application.
 
 To install the plugin on your regular Eclipse environment (e.g. for personal use), you will need to package the plugin so it can be installed via the Eclipse Install New Software tool. Since this repository is purely for the development of the tool, there is currently no support in this repository for packaging the plugin for installation.
 
@@ -44,12 +46,3 @@ After a query, cycle through possible solutions with ctrl + `.
 After you select a snippet, you will be prompted for feedback if feedback has been enabled in the preferences.txt
 
 
-/*   Plugin Uninstall Information:   */
-
-I understand that you may not want random plugins to remain on your workspace. Uninstalling is much simpler than installing. To do this, follow these steps:
-
-1. Navigate to Help->Installation details... in the menu bar.
-2. Filter by "nlp2code" or scroll down to find nlp2code.
-3. Select nlp2code and press Uninstall.
-4. Press "Finish" on the next window.
-5. Restart Eclipse and the plugin should now be gone!
