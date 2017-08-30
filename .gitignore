@@ -1,16 +1,8 @@
 # Eclipse
-.classpath
-.project
-.settings/
-
-# Intellij
-.idea/
-*.iml
-*.iws
+/task_extraction/.classpath
+/task_extraction/.project
+/task_extraction/.settings/
 
 # Mac
 .DS_Store
 
-# Maven
-log/
-target/
