@@ -47,6 +47,10 @@ Conduct a query by:
 After a query, cycle through possible solutions with ctrl + `.
 After you select a snippet, you will be prompted for feedback if feedback has been enabled in the preferences.txt
 
+## How to contribute:
+
+Pull requests are most welcome!
+
 ## References:
 
 See http://cs.adelaide.edu.au/~christoph/icsme17c.pdf for more information
