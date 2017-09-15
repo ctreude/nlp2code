@@ -1,29 +1,31 @@
-Nlp2code Eclipse plugin
+# NLP2Code Eclipse plugin
 
-/*   Plugin Installation Instructions:   */
+[![NLP2Code video](https://img.youtube.com/vi/h-gaVYtCznI/0.jpg)](https://www.youtube.com/watch?v=h-gaVYtCznI)
+
+## Plugin Installation Instructions:
 
 To install the plugin for development:
  1. Download and install the Eclipse SDK from the Eclipse Project page.
  2. Install Git Integration (EGit) for the Eclipse SDK.
  3. File->Import->Git->Projects from Git->Clone URI.
- 4. Copy and paste the .git URI from the Nlp2code GitHub.
+ 4. Copy and paste the .git URI from the NLP2Code GitHub.
  5. Press Next until you get to the project import wizard. Choose "Import exisiting Eclipse projects" and press Next and Finish.
  6. You can now run the plugin by setting the Run Configuration to run as an Eclipse Application.
 
 To install the plugin on your regular Eclipse environment (e.g. for personal use), you will need to package the plugin so it can be installed via the Eclipse Install New Software tool. Since this repository is purely for the development of the tool, there is currently no support in this repository for packaging the plugin for installation.
 
 
-/*   Important Plugin Configuration Settings:   */
+## Important Plugin Configuration Settings:
 
 Content Assist:
-To get the most out of the plugin, it is strongly recommended to add a content assist binding to trigger the nlp2code task content assist window. You can do this by navigating to: Preferences->Java->Editor->Content Assist (Path may be different depending on Eclipse version) and adding a '?' symbol to the set of symbols that trigger content assist.
+To get the most out of the plugin, it is strongly recommended to add a content assist binding to trigger the NLP2Code task content assist window. You can do this by navigating to: Preferences->Java->Editor->Content Assist (Path may be different depending on Eclipse version) and adding a '?' symbol to the set of symbols that trigger content assist.
 
 Google Custom Search Engine (CSE):
 Currently, the plugin uses Google's Custom Search Engine API to collect StackOverflow forum threads. The free version of this API is limited to 100 requests a day (shared between all users of the plugin). It is recommended that you either sign up for and create your own Google Custom Search Engine to relax this hard limit. To add your Google CSE to the plugin, edit the appropriate "key" and "cx" variables in Searcher.java with your Google API key and your Google CSE ID.
 Full instructions on how to get your own Google CSE is in the "GoogleCSEInstructions.txt" file.
 
 
-/*   How to use the plugin:   */
+## How to use the plugin:
 
 There are many ways to activate and use the plugin. 
 Firstly, ensure that you are connected to the internet as this is needed to get Stack Overflow data.
@@ -45,4 +47,6 @@ Conduct a query by:
 After a query, cycle through possible solutions with ctrl + `.
 After you select a snippet, you will be prompted for feedback if feedback has been enabled in the preferences.txt
 
+## References:
 
+See http://cs.adelaide.edu.au/~christoph/icsme17c.pdf for more information
